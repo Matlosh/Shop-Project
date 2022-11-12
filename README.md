@@ -7,5 +7,8 @@ Android app created in Java for a school project. It simulates small shop with p
 - hashes created passwords
 - allows to send SMS or Email with contents of earlier created order
 
+### Note
+*All images used in the application were not created by me.*
+
 ### State
 Because it is a school project, app is **finished** and won't be further developed.
