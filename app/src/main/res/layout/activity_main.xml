@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/computer_set_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/computer_set_header"
+                android:textSize="16sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="true"/>
+
+            <Spinner
+                android:id="@+id/computer_sets_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:layout_below="@id/computer_set_header"/>
+
+            <TextView
+                android:id="@+id/peripherals_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/peripherals_header"
+                android:textSize="16sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="true"
+                android:layout_below="@id/computer_sets_spinner"/>
+
+            <RelativeLayout
+                android:id="@+id/peripherals_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/peripherals_header"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+
+                <CheckBox
+                    android:id="@+id/keyboard_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keyboard_checkbox_text"/>
+
+                <Spinner
+                    android:id="@+id/keyboards_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown"
+                    android:layout_below="@id/keyboard_checkbox"/>
+
+                <CheckBox
+                    android:id="@+id/mouse_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mouse_checkbox_text"
+                    android:layout_below="@id/keyboards_spinner"/>
+
+                <Spinner
+                    android:id="@+id/mouses_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown"
+                    android:layout_below="@id/mouse_checkbox"/>
+
+                <CheckBox
+                    android:id="@+id/monitor_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/monitor_checkbox_text"
+                    android:layout_below="@id/mouses_spinner"/>
+
+                <Spinner
+                    android:id="@+id/monitors_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown"
+                    android:layout_below="@id/monitor_checkbox"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/customer_data_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/customer_data_header"
+                android:textSize="16sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="true"
+                android:layout_below="@id/peripherals_layout"/>
+
+            <EditText
+                android:id="@+id/customer_name_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/customer_name_hint"
+                android:layout_below="@id/customer_data_header"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <EditText
+                android:id="@+id/customer_surname_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/customer_surname_hint"
+                android:layout_below="@id/customer_name_input"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:id="@+id/total_price_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/total_price_header"
+                android:textSize="16sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="true"
+                android:layout_below="@id/customer_surname_input"/>
+
+            <TextView
+                android:id="@+id/total_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_below="@id/total_price_header"/>
+
+            <Button
+                android:id="@+id/order_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/order_button"
+                android:layout_below="@id/total_price"
+                android:layout_marginTop="30dp"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

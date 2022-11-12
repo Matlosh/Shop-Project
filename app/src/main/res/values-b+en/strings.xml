@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Shop</string>
+
+    <!-- Homepage -->
+    <string name="order_button">Order</string>
+
+    <string name="computer_set_header">Computer set</string>
+    <string name="peripherals_header">Peripherals</string>
+    <string name="customer_data_header">Customer\'s data</string>
+    <string name="total_price_header">Products price</string>
+
+    <string name="keyboard_checkbox_text">Keyboard</string>
+    <string name="mouse_checkbox_text">Mouse</string>
+    <string name="monitor_checkbox_text">Monitor</string>
+
+    <string name="customer_name_hint">Customer\'s name...</string>
+    <string name="customer_surname_hint">Customer\'s surname...</string>
+
+    <string name="customer_name_error_empty">Customer\'s name cannot be empty.</string>
+    <string name="customer_surname_error_empty">Customer\'s surname cannot be empty.</string>
+
+    <string name="order_ordered_positive">Order was placed.</string>
+    <string name="order_ordered_negative">Order couldn\'t be placed. Try again.</string>
+
+    <!-- Menu -->
+    <string name="menu_orders_list">Orders list</string>
+    <string name="menu_login">Log in</string>
+    <string name="menu_about">About app</string>
+    <string name="menu_user_account">User account</string>
+    <string name="menu_share">Share</string>
+
+    <!-- AboutApp -->
+    <string name="about_author">App was created by Mateusz Lewandowski, 4pg</string>
+    <string name="about_app">About app: That\'s the best app I could ever find</string>
+
+    <!-- Order headers -->
+    <string name="order_header">Order nr.</string>
+    <string name="order_customer_name_header">Customer\'s name</string>
+    <string name="order_customer_surname_header">Customer\'s surname</string>
+    <string name="order_computer_set_header">Computer set</string>
+    <string name="order_keyboard_header">Keyboard</string>
+    <string name="order_mouse_header">Mouse</string>
+    <string name="order_monitor_header">Monitor</string>
+    <string name="order_price_header">Order\'s price</string>
+    <string name="order_order_date_header">Order\'s order date</string>
+
+    <!-- Send SMS/Email AlertDialog -->
+    <string name="alertdialog_header">Send SMS or Email with order</string>
+    <string name="alertdialog_phone_number_hint">Phone number...</string>
+    <string name="alertdialog_send_sms">Send SMS</string>
+    <string name="alertdialog_email_address_hint">Email address...</string>
+    <string name="alertdialog_send_email">Send Email</string>
+    <string name="finish_button">Finish</string>
+    <string name="alertdialog_phone_number_error">Phone number must have at least 6 digits!</string>
+    <string name="alertdialog_email_address_error">Email address must have at least 6 signs!</string>
+    <string name="email_message_subject">Order creation confirmation</string>
+    <string name="thank_you_message">Thank you for ordering.</string>
+
+    <!-- LogIn -->
+    <string name="login_login_button">Login</string>
+    <string name="login_register_button">Register</string>
+    <string name="login_text">Log in</string>
+    <string name="register_text">Register</string>
+    <string name="input_username_hint">Username...</string>
+    <string name="input_password_hint">Password...</string>
+    <string name="empty_username_error">Username can\'t be empty!</string>
+    <string name="empty_password_error">Password can\'t be empty!</string>
+    <string name="register_successful">Account created successfully!</string>
+    <string name="register_unsuccessful">Account couldn\'t be created.</string>
+    <string name="login_successful">Successfully logged in.</string>
+    <string name="login_unsuccessful">Couldn\'t log in. Check your username and password and try again.</string>
+
+    <!-- UserAccount -->
+    <string name="cookies_error">You aren\'t logged in. Try to log in again in order to have access to this tab.</string>
+    <string name="welcome_message">Welcome</string>
+    <string name="publish_image">Publish an image</string>
+    <string name="upload_image_fail">Uploading image failed, try again.</string>
+    <string name="upload_image_successful">Image was published.</string>
+    <string name="log_out">Log out</string>
+    <string name="log_out_confirmation">Logged out.</string>
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.UserAccount">
+
+    <TextView
+        android:id="@+id/welcome_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/welcome_message"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/log_out_button"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/log_out"
+        android:layout_below="@id/welcome_message"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/secondary_color_darker_1"/>
+
+    <Button
+        android:id="@+id/publish_image_button"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/publish_image"
+        android:layout_below="@id/log_out_button"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/secondary_color"/>
+
+    <ListView
+        android:id="@+id/user_images"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/publish_image_button"/>
+
+</RelativeLayout>

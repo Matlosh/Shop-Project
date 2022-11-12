@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">Sklep</string>
+
+    <!-- Homepage -->
+    <string name="order_button">Zamów</string>
+
+    <string name="computer_set_header">Zestaw komputerowy</string>
+    <string name="peripherals_header">Urządzenia peryferyjne</string>
+    <string name="customer_data_header">Dane kupującego</string>
+    <string name="total_price_header">Łączna cena</string>
+
+    <string name="keyboard_checkbox_text">Klawiatura</string>
+    <string name="mouse_checkbox_text">Mysz</string>
+    <string name="monitor_checkbox_text">Monitor</string>
+
+    <string name="customer_name_hint">Imię kupującego...</string>
+    <string name="customer_surname_hint">Nazwisko kupującego...</string>
+
+    <string name="customer_name_error_empty">Imię kupującego nie może być puste.</string>
+    <string name="customer_surname_error_empty">Nazwisko kupującego nie może być puste.</string>
+
+    <string name="order_ordered_positive">Złożono zamówienie.</string>
+    <string name="order_ordered_negative">Zamówienie nie mogło zostać złożone. Spróbuj ponownie.</string>
+
+    <!-- Menu -->
+    <string name="menu_orders_list">Lista zamówień</string>
+    <string name="menu_login">Logowanie</string>
+    <string name="menu_about">O programie</string>
+    <string name="menu_user_account">Konto użytkownika</string>
+    <string name="menu_share">Udostępnij</string>
+
+    <!-- AboutApp -->
+    <string name="about_author">Aplikacja została stworzona przez Mateusza Lewandowskiego, 4pg</string>
+    <string name="about_app">O aplikacji: Najlepsza aplikacja jaką znam</string>
+
+    <!-- Order headers -->
+    <string name="order_header">Zamówienie nr.</string>
+    <string name="order_customer_name_header">Imię klienta</string>
+    <string name="order_customer_surname_header">Nazwisko klienta</string>
+    <string name="order_computer_set_header">Zestaw komputerowy</string>
+    <string name="order_keyboard_header">Klawiatura</string>
+    <string name="order_mouse_header">Mysz</string>
+    <string name="order_monitor_header">Monitor</string>
+    <string name="order_price_header">Koszt zamówienia</string>
+    <string name="order_order_date_header">Data złożenia zamówienia</string>
+
+    <!-- Send SMS/Email AlertDialog -->
+    <string name="alertdialog_header">Wyślij SMS lub Email zamówienia</string>
+    <string name="alertdialog_phone_number_hint">Numer telefonu...</string>
+    <string name="alertdialog_send_sms">Wyślij SMS</string>
+    <string name="alertdialog_email_address_hint">Adres email...</string>
+    <string name="alertdialog_send_email">Wyślij email</string>
+    <string name="finish_button">Zakończ</string>
+    <string name="alertdialog_phone_number_error">Numer telefonu musi mieć przynajmniej 6 cyfr!</string>
+    <string name="alertdialog_email_address_error">Adres email musi mieć przynajmniej 6 znaków!</string>
+    <string name="email_message_subject">Potwierdzenie złożenia zamówienia</string>
+    <string name="thank_you_message">Dziękujemy za złożenie zamówienia.</string>
+
+    <!-- LogIn -->
+    <string name="login_login_button">Zaloguj</string>
+    <string name="login_register_button">Zarejestruj</string>
+    <string name="login_text">Zaloguj się</string>
+    <string name="register_text">Zarejestruj się</string>
+    <string name="input_username_hint">Nazwa użytkownika...</string>
+    <string name="input_password_hint">Hasło...</string>
+    <string name="empty_username_error">Nazwa użytkownika nie może być pusta!</string>
+    <string name="empty_password_error">Hasło nie może być puste!</string>
+    <string name="register_successful">Konto stworzone pomyślnie!</string>
+    <string name="register_unsuccessful">Konto nie mogło zostać stworzone.</string>
+    <string name="login_successful">Zalogowano pomyślnie!</string>
+    <string name="login_unsuccessful">Nie zalogowano. Sprawdź nazwę użytkownika oraz hasło i spróbuj ponownie.</string>
+
+    <!-- UserAccount -->
+    <string name="cookies_error">Jesteś wylogowany. Spróbuj się zalogować, aby mieć dostęp do tej zakładki.</string>
+    <string name="welcome_message">Witaj</string>
+    <string name="publish_image">Opublikuj obraz</string>
+    <string name="upload_image_fail">Opublikowanie obrazu się nie powiodło. Spróbuj ponownie.</string>
+    <string name="upload_image_successful">Obraz został opublikowany.</string>
+    <string name="log_out">Wyloguj się</string>
+    <string name="log_out_confirmation">Wylogowano.</string>
+</resources>
