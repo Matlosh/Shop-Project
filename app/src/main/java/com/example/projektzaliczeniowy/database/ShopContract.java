@@ -71,7 +71,7 @@ public class ShopContract {
 
     public static class ShopDbHelper extends SQLiteOpenHelper {
 
-        public static final int DATABASE_VERSION = 7;
+        public static final int DATABASE_VERSION = 8;
         public static final String DATABASE_NAME = "Shop.db";
         private final String TABLE_NAME;
 
@@ -83,36 +83,36 @@ public class ShopContract {
         @Override
         public void onCreate(SQLiteDatabase db) {
             Log.v(TAG, TABLE_NAME);
-            switch(TABLE_NAME) {
-                case Orders.TABLE_NAME:
+//            switch(TABLE_NAME) {
+//                case Orders.TABLE_NAME:
                     db.execSQL(SQL_CREATE_ORDERS);
-                    break;
+//                    break;
 
-                case Users.TABLE_NAME:
+//                case Users.TABLE_NAME:
                     db.execSQL(SQL_CREATE_USERS);
-                    break;
+//                    break;
 
-                case Images.TABLE_NAME:
+//                case Images.TABLE_NAME:
                     db.execSQL(SQL_CREATE_IMAGES);
-                    break;
-            }
+//                    break;
+//            }
         }
 
         @Override
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-            switch(TABLE_NAME) {
-                case Orders.TABLE_NAME:
+//            switch(TABLE_NAME) {
+//                case Orders.TABLE_NAME:
                     db.execSQL(SQL_DELETE_ORDERS);
-                    break;
+//                    break;
 
-                case Users.TABLE_NAME:
+//                case Users.TABLE_NAME:
                     db.execSQL(SQL_DELETE_USERS);
-                    break;
+//                    break;
 
-                case Images.TABLE_NAME:
+//                case Images.TABLE_NAME:
                     db.execSQL(SQL_DELETE_IMAGES);
-                    break;
-            }
+//                    break;
+//            }
             onCreate(db);
         }
     }

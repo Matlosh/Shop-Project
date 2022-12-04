@@ -13,6 +13,7 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.text.format.Formatter;
 import android.util.Base64;
 import android.util.Log;
 import android.widget.Button;
@@ -91,13 +92,20 @@ public class UserAccount extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), getResources().getString(R.string.upload_image_fail),
                                     Toast.LENGTH_SHORT).show();
                             return;
+                        } catch (NullPointerException e) {
+                            return;
                         }
+
+//                        Formatter.formatFileSize(getApplicationContext(), bitmap.getByteCount())
+                        Log.v(TAG, "ByteCount: " + String.valueOf(bitmap.getWidth() * bitmap.getHeight()));
 
                         // Converts bitmap to String
                         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-                        bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
+                        bitmap.compress(Bitmap.CompressFormat.PNG, 50, byteArrayOutputStream);
                         byte[] byteArray = byteArrayOutputStream.toByteArray();
                         imageString = Base64.encodeToString(byteArray, Base64.NO_WRAP);
+
+                        Log.v(TAG, "String length: " + imageString.length());
 
                         if(ShopOperations.publishImage(getApplicationContext(), imageString, userID)) {
                             Toast.makeText(getApplicationContext(), getResources().getString(R.string.upload_image_successful),

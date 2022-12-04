@@ -1,5 +1,6 @@
 package com.example.projektzaliczeniowy.database;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -207,7 +208,98 @@ public class ShopOperations {
         return rowID != -1;
     }
 
+    @SuppressLint("Range")
+    public static ArrayList<String> getTableRowsNumber(Context context, String TABLE_NAME, int userID) {
+        ShopContract.ShopDbHelper dbHelper = new ShopContract.ShopDbHelper(context, TABLE_NAME);
+        SQLiteDatabase dbReadable = dbHelper.getReadableDatabase();
+
+        ArrayList<String> ids = new ArrayList<>();
+
+        String[] projection = {
+                ShopContract.Images._ID
+        };
+
+        String selection = ShopContract.Images.COLUMN_NAME_USER_ID + " = ?";
+        String[] selectionArgs = {String.valueOf(userID)};
+
+        Cursor cursor = dbReadable.query(
+                TABLE_NAME,
+                projection,
+                selection,
+                selectionArgs,
+                null,
+                null,
+                null
+        );
+
+//        int rowsNum = cursor.getCount();
+        while(cursor.moveToNext()) {
+            ids.add(cursor.getString(cursor.getColumnIndex(ShopContract.Images._ID)));
+        }
+        cursor.close();
+        dbReadable.close();
+
+        return ids;
+    }
+
+//    public static long getStringMaxValue(Context context, String TABLE_NAME, String COLUMN_NAME)
+
+    @SuppressLint("Range")
     public static ArrayList<String> getImages(Context context, int userID) {
+//        ShopContract.ShopDbHelper dbHelper = new ShopContract.ShopDbHelper(context, ShopContract.Images.TABLE_NAME);
+//        SQLiteDatabase dbReadable = dbHelper.getReadableDatabase();
+//
+//        ArrayList<String> images = new ArrayList<>();
+//        ArrayList<String> ids = getTableRowsNumber(context, ShopContract.Images.TABLE_NAME, userID);
+//
+//        for(int i = 0; i < ids.size(); i++) {
+//            Cursor cursor1 = dbReadable.rawQuery(
+//                    String.format("SELECT length(%s) FROM %s WHERE %s = %s",
+//                            ShopContract.Images.COLUMN_NAME_IMAGE,
+//                            ShopContract.Images.TABLE_NAME,
+//                            ShopContract.Images._ID,
+//                            ids.get(i)),
+//                    null);
+//
+//            Log.v(TAG, "Cursor count: " + cursor1.getCount());
+//
+//            long stringLength = 0;
+//            while(cursor1.moveToNext()) {
+////                images.add(cursor.getString(cursor.getColumnIndexOrThrow(ShopContract.Images.COLUMN_NAME_IMAGE)));
+//                stringLength = Long.parseLong(cursor1.getString(cursor1.getColumnIndex(cursor1.getColumnName(0))));
+////                Log.v(TAG, "Fetched data: " + cursor1.getString(cursor1.getColumnIndex(cursor1.getColumnName(0))));
+//            }
+//            cursor1.close();
+//            Log.v(TAG, "stringLength:" + String.valueOf(stringLength));
+//
+//            long maxAllocationSize = 10000;
+//            String image = "";
+//            for(long j = 0; j < stringLength; j += maxAllocationSize) {
+//                Cursor dataCursor = dbReadable.rawQuery(
+//                        String.format("SELECT substr(%s, %s, %s) FROM %s WHERE %s = %s",
+//                                ShopContract.Images.COLUMN_NAME_IMAGE,
+//                                j,
+//                                j + maxAllocationSize,
+//                                ShopContract.Images.TABLE_NAME,
+//                                ShopContract.Images._ID,
+//                                ids.get(i)),
+//                        null);
+//
+//                String imageTemp = "";
+//                while(dataCursor.moveToNext()) {
+////                    Log.v(TAG, dataCursor.getString(dataCursor.getColumnIndex(dataCursor.getColumnName(0))));
+//                    imageTemp = dataCursor.getString(dataCursor.getColumnIndex(dataCursor.getColumnName(0)));
+//                }
+//                dataCursor.close();
+//
+//                image += imageTemp;
+//            }
+//        }
+//
+//        dbReadable.close();
+//
+//        return images;
+
         ShopContract.ShopDbHelper dbHelper = new ShopContract.ShopDbHelper(context, ShopContract.Images.TABLE_NAME);
         SQLiteDatabase dbReadable = dbHelper.getReadableDatabase();
 
